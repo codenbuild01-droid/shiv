@@ -1,360 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shiv Craft — CNC Creation</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#f4f4f4;
-  color:#222;
-}
-
-/* HEADER */
-header{
-  background:white;
-  padding:14px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-header h2{
-  margin:0;
-  color:#ff7a00;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding:100px 8%;
-  background:linear-gradient(135deg,#ff7a00,#ff9a3d);
-  color:white;
-}
-.hero-box{
-  max-width:900px;
-  margin:auto;
-  background:rgba(255,255,255,0.12);
-  border-radius:20px;
-  padding:30px;
-  backdrop-filter:blur(6px);
-}
-.hero img{
-  height:130px;
-  margin-bottom:10px;
-}
-.hero h1{
-  font-size:38px;
-  margin:0;
-}
-.hero p{
-  font-size:18px;
-  opacity:.9;
-}
-
-/* BUTTONS */
-.btn{
-  padding:12px 22px;
-  border-radius:30px;
-  border:none;
-  cursor:pointer;
-  margin:6px;
-  font-size:15px;
-  transition:.25s;
-}
-.primary{
-  background:white;
-  color:#ff7a00;
-}
-.primary:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 18px rgba(0,0,0,0.25);
-}
-.secondary{
-  background:transparent;
-  border:2px solid white;
-  color:white;
-}
-.secondary:hover{
-  background:white;
-  color:#ff7a00;
-}
-
-/* SECTIONS */
-section{
-  padding:60px 8%;
-}
-.section-title{
-  text-align:center;
-  font-size:28px;
-  margin-bottom:30px;
-}
-
-/* SERVICES GRID */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-}
-.card{
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 2px 15px rgba(0,0,0,0.08);
-  transition:.25s;
-}
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 35px rgba(0,0,0,0.18);
-}
-
-/* PROJECT GALLERY */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-}
-.project-card{
-  background:white;
-  border-radius:15px;
-  box-shadow:0 2px 15px rgba(0,0,0,0.10);
-  overflow:hidden;
-  transition:.25s;
-  text-align:center;
-  cursor:pointer;
-}
-.project-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.20);
-}
-.project-card .img-wrap{
-  position:relative;
-}
-.project-card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-/* WATERMARK */
-.project-card .img-wrap::after{
-  content:"Shiv Craft — CNC Creation";
-  position:absolute;
-  bottom:10px;
-  right:10px;
-  font-size:12px;
-  color:white;
-  opacity:0.8;
-  background:rgba(0,0,0,0.35);
-  padding:4px 8px;
-  border-radius:6px;
-}
-
-.project-card p{
-  padding:12px;
-  font-weight:600;
-  color:#444;
-}
-
-/* LIGHTBOX */
-.lightbox{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.9);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:1000;
-}
-.lightbox img{
-  max-width:90%;
-  max-height:90%;
-  border-radius:15px;
-}
-
-/* CONTACT */
-.contact-box{
-  text-align:center;
-  background:white;
-  padding:40px;
-  border-radius:15px;
-  box-shadow:0 2px 20px rgba(0,0,0,0.12);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:25px;
-  background:#111;
-  color:white;
-  margin-top:40px;
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-  <h2>Shiv Craft</h2>
-  <small>CNC Creation</small>
-</header>
-
-<section class="hero">
-  <div class="hero-box">
-    <img src="logo.png" alt="Shiv Craft Logo">
-    <h1>Premium CNC Cutting & Carving Solutions</h1>
-    <p>Custom CNC Jali, Door Carving, Stone Work & Decorative Designs for Homes, Offices & Commercial Spaces.</p>
-
-    <button class="btn primary">Get a Free Quote</button>
-    <button class="btn secondary">WhatsApp Us</button>
-  </div>
-</section>
-
-<section>
-  <h2 class="section-title">Our CNC Services</h2>
-
-  <div class="services">
-
-    <div class="card">
-      <h3>Interior CNC Design</h3>
-      <ul>
-        <li>CNC Jali Partition</li>
-        <li>Wall Art Panels</li>
-        <li>2D & 3D Carving</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Exterior CNC Work</h3>
-      <ul>
-        <li>ACP / WPC / PVC Cutting</li>
-        <li>Gate & Balcony Panels</li>
-        <li>Elevation Designs</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Door Carving</h3>
-      <ul>
-        <li>Teak Wood</li>
-        <li>HDHMR</li>
-        <li>MDF Designer Doors</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Stone & Marble CNC</h3>
-      <ul>
-        <li>Temple Stone Carving</li>
-        <li>Marble CNC Work</li>
-        <li>Granite Name Plates</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Name Boards & Signage</h3>
-      <ul>
-        <li>3D CNC Lettering</li>
-        <li>Business Signboards</li>
-        <li>Brand Identity</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2 class="section-title">Our CNC Project Work</h2>
-
-  <div class="projects">
-
-    <div class="project-card" onclick="openLightbox(this)">
-      <div class="img-wrap">
-        <img src="project1.jpg">
-      </div>
-      <p>Designer CNC Door Work</p>
-    </div>
-
-    <div class="project-card" onclick="openLightbox(this)">
-      <div class="img-wrap">
-        <img src="project2.jpg">
-      </div>
-      <p>Exterior CNC Façade Panels</p>
-    </div>
-
-    <div class="project-card" onclick="openLightbox(this)">
-      <div class="img-wrap">
-        <img src="project3.jpg">
-      </div>
-      <p>CNC Pooja Mandir Work</p>
-    </div>
-
-    <div class="project-card" onclick="openLightbox(this)">
-      <div class="img-wrap">
-        <img src="project4.jpg">
-      </div>
-      <p>Stone & Marble CNC Work</p>
-    </div>
-
-    <div class="project-card" onclick="openLightbox(this)">
-      <div class="img-wrap">
-        <img src="project5.jpg">
-      </div>
-      <p>Interior CNC Jali Partition</p>
-    </div>
-
-  </div>
-</section>
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
-
-<section>
-  <div class="contact-box">
-    <h2>Contact Us</h2>
-    <p><strong>Shiv Craft — CNC Creation</strong></p>
-
-    <p>
-      📞 Atul Thakare — 7057341391<br>
-      📞 Pratik Bokse — 8554804610<br>
-      📞 Akash Gawande — 8390886527
-    </p>
-
-    <p>🟢 WhatsApp Available</p>
-
-    <button class="btn primary">Call Now</button>
-  </div>
-</section>
-
-<footer>
-  © Shiv Craft — CNC Creation
-</footer>
-
-<script>
-function openLightbox(card){
-  let imgSrc = card.querySelector("img").src;
-  document.getElementById("lightbox-img").src = imgSrc;
-  document.getElementById("lightbox").style.display = "flex";
-}
-function closeLightbox(){
-  document.getElementById("lightbox").style.display = "none";
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shiv CNC Creations — Precision • Creativity • Custom Design</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS & Animations -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--header-height, 84px);
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+      }
+      .animated-gradient {
+        background-size: 200% 200%;
+        animation: gradient-animation 10s ease infinite;
+      }
+      @keyframes gradient-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      @keyframes pulse-glow {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+        50% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+        }
+      }
+      .animate-pulse-glow {
+        animation: pulse-glow 2.5s infinite;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
 }
 </script>
+</head>
+<body>
+    <div id="root"></div>
 
+    <!-- React Libraries -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel for JSX Transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React Application Code -->
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        // ===== COMPONENT: Header =====
+        const Header = () => {
+          const headerRef = useRef(null);
+
+          useEffect(() => {
+            const updateHeaderHeight = () => {
+              if (headerRef.current) {
+                const headerHeight = headerRef.current.offsetHeight;
+                document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+              }
+            };
+            updateHeaderHeight();
+            window.addEventListener('resize', updateHeaderHeight);
+            return () => window.removeEventListener('resize', updateHeaderHeight);
+          }, []);
+
+          const navLinks = [
+            { href: '#why-us', text: 'Why Us' },
+            { href: '#services', text: 'Services' },
+            { href: '#projects', text: 'Projects' },
+            { href: '#contact', text: 'Contact' },
+          ];
+
+          return (
+            <header ref={headerRef} className="bg-white py-2.5 px-4 sm:px-[8%] flex items-center justify-between shadow-md sticky top-0 z-50">
+              <div className="flex items-center gap-3">
+                <img 
+                  src="https://raw.githubusercontent.com/codenbuild01-droid/shiv/refs/heads/main/logo.png.png" 
+                  alt="Shiv CNC Creations Logo" 
+                  className="h-20 w-20 rounded-lg transition-transform duration-300 hover:scale-105"
+                />
+                <div className="flex flex-col leading-tight">
+                  <h2 className="m-0 text-amber-600 font-bold text-2xl">Shiv CNC Creations</h2>
+                </div>
+              </div>
+              <nav className="hidden md:flex items-center gap-8">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.text}
+                    href={link.href}
+                    className="text-gray-600 font-medium hover:text-amber-600 transition-all duration-300 cursor-pointer hover:-translate-y-0.5"
+                  >
+                    {link.text}
+                  </a>
+                ))}
+              </nav>
+            </header>
+          );
+        };
+
+        // ===== COMPONENT: Hero =====
+        const Hero = () => {
+            const CheckCircleIcon = () => (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white/80 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            );
+
+            const [offsetY, setOffsetY] = useState(0);
+            const handleScroll = () => setOffsetY(window.pageYOffset);
+
+            useEffect(() => {
+                window.addEventListener('scroll', handleScroll, { passive: true });
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
+            const handleWhatsAppClick = () => {
+                window.open("https://wa.me/917057341391", "_blank");
+            };
+
+            return (
+                <section className="relative text-white overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-600 to-orange-500 animated-gradient"></div>
+                  <div 
+                    className="absolute inset-0 opacity-10" 
+                    style={{ 
+                      backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+                      backgroundPosition: `center ${offsetY * 0.4}px`
+                    }}
+                  ></div>
+                  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                      <div 
+                        className="text-center lg:text-left" 
+                        style={{ transform: `translateY(${offsetY * 0.2}px)` }}
+                      >
+                        <h1 className="text-5xl md:text-6xl font-black tracking-tight text-white drop-shadow-lg animate-fadeInUp">
+                          Shiv CNC Creations
+                          <span className="block text-white/90 font-semibold text-2xl mt-2">Crafted with Precision</span>
+                        </h1>
+                        <p className="mt-6 text-lg text-white/90 max-w-lg mx-auto lg:mx-0 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+                          We bring your creative visions to life with state-of-the-art CNC technology, delivering flawless results for interiors, exteriors, and custom projects.
+                        </p>
+                        <ul className="mt-8 space-y-3 text-left inline-block animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
+                          <li className="flex items-center"><CheckCircleIcon /> Precision Engineering</li>
+                          <li className="flex items-center"><CheckCircleIcon /> Custom Artistry</li>
+                          <li className="flex items-center"><CheckCircleIcon /> Durable & Quality Materials</li>
+                        </ul>
+                        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
+                           <button className="py-3 px-8 rounded-full border-none cursor-pointer text-base transition-all duration-300 bg-white text-amber-600 font-bold shadow-lg hover:scale-105 hover:brightness-105 transform animate-pulse-glow">
+                            Get a Free Quote
+                          </button>
+                          <button 
+                            onClick={handleWhatsAppClick}
+                            className="py-3 px-8 rounded-full cursor-pointer text-base transition-all duration-300 bg-white/20 border-2 border-white/50 text-white font-bold backdrop-blur-sm hover:bg-white/30 hover:border-white hover:scale-105 transform">
+                            WhatsApp Us
+                          </button>
+                        </div>
+                      </div>
+                      <div 
+                        className="hidden lg:block animate-fadeInUp" 
+                        style={{ 
+                          animationDelay: '0.3s',
+                          transform: `translateY(${offsetY * 0.1}px)`
+                        }}
+                      >
+                        <div className="bg-white/20 rounded-3xl p-4 backdrop-blur-md shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
+                          <img 
+                            src="https://raw.githubusercontent.com/codenbuild01-droid/shiv/refs/heads/main/project3.jpg.jpg" 
+                            alt="Designer CNC Door Work" 
+                            className="rounded-2xl w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            );
+        };
+        
+        // ===== COMPONENT: ProjectCard =====
+        const ProjectCard = ({ project, onClick }) => {
+            return (
+                <div 
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-xl overflow-hidden cursor-pointer transform hover:-translate-y-1 transition-all duration-300 ease-in-out h-full flex flex-col"
+                  onClick={onClick}
+                >
+                  <div className="relative group overflow-hidden">
+                    <img 
+                      src={project.imgSrc} 
+                      alt={project.title} 
+                      className="w-full h-56 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" 
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-2.5 right-2.5 text-xs text-white opacity-80 bg-black/30 px-2 py-1 rounded-md">
+                      Shiv CNC Creations
+                    </div>
+                  </div>
+                  <p className="text-center p-4 font-semibold text-gray-700 mt-auto">{project.title}</p>
+                </div>
+            );
+        };
+        
+        // ===== COMPONENT: ProjectGallery =====
+        const ProjectGallery = ({ projects, onImageClick }) => {
+            const ArrowLeftIcon = () => (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            );
+            const ArrowRightIcon = () => (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            );
+
+            const scrollContainerRef = useRef(null);
+            const [canScrollLeft, setCanScrollLeft] = useState(false);
+            const [canScrollRight, setCanScrollRight] = useState(false);
+
+            useEffect(() => {
+                const container = scrollContainerRef.current;
+                if (!container) return;
+                const checkScrollability = () => {
+                    const buffer = 2;
+                    const atStart = container.scrollLeft <= buffer;
+                    const atEnd = container.scrollLeft >= container.scrollWidth - container.clientWidth - buffer;
+                    setCanScrollLeft(!atStart);
+                    setCanScrollRight(!atEnd && container.scrollWidth > container.clientWidth);
+                };
+                checkScrollability();
+                container.addEventListener('scroll', checkScrollability, { passive: true });
+                window.addEventListener('resize', checkScrollability);
+                return () => {
+                    container.removeEventListener('scroll', checkScrollability);
+                    window.removeEventListener('resize', checkScrollability);
+                };
+            }, [projects]);
+
+            const scroll = (direction) => {
+                if (scrollContainerRef.current) {
+                    const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+                    scrollContainerRef.current.scrollBy({
+                        left: direction === 'left' ? -scrollAmount : scrollAmount,
+                        behavior: 'smooth',
+                    });
+                }
+            };
+
+            return (
+                <section className="py-12">
+                  <h2 className="text-center my-5 px-4 sm:px-[8%] text-3xl font-bold text-gray-800">Our CNC Project Work</h2>
+                  <div className="relative group mt-8">
+                    <div 
+                      ref={scrollContainerRef}
+                      className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide py-4 gap-5 px-4 sm:px-[8%]"
+                    >
+                      {projects.map((project, index) => (
+                        <div key={index} className="snap-center flex-shrink-0 w-[80%] sm:w-[40%] md:w-[30%] lg:w-1/4">
+                          <ProjectCard project={project} onClick={() => onImageClick(project.imgSrc)} />
+                        </div>
+                      ))}
+                    </div>
+                    <button 
+                      onClick={() => scroll('left')}
+                      disabled={!canScrollLeft}
+                      className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2.5 shadow-lg hover:bg-white hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 disabled:opacity-30 disabled:cursor-not-allowed z-10"
+                      aria-label="Scroll left"
+                    >
+                      <ArrowLeftIcon />
+                    </button>
+                    <button 
+                      onClick={() => scroll('right')}
+                      disabled={!canScrollRight}
+                      className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2.5 shadow-lg hover:bg-white hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 disabled:opacity-30 disabled:cursor-not-allowed z-10"
+                      aria-label="Scroll right"
+                    >
+                      <ArrowRightIcon />
+                    </button>
+                  </div>
+                </section>
+            );
+        };
+
+        // ===== COMPONENT: Lightbox =====
+        const Lightbox = ({ imgSrc, onClose }) => {
+            return (
+                <div 
+                  className="fixed inset-0 bg-black/90 flex items-center justify-center z-[999] animate-fade-in"
+                  onClick={onClose}
+                >
+                  <style>{`
+                    @keyframes fade-in {
+                      from { opacity: 0; }
+                      to { opacity: 1; }
+                    }
+                    .animate-fade-in {
+                      animation: fade-in 0.3s ease-in-out;
+                    }
+                  `}</style>
+                  <img 
+                    src={imgSrc} 
+                    alt="Enlarged project view" 
+                    className="max-w-[90%] max-h-[90%] rounded-2xl shadow-2xl"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </div>
+            );
+        };
+
+        // ===== COMPONENT: WhyChooseUs =====
+        const WhyChooseUs = () => {
+            const features = [
+              "Advanced CNC machines for high precision",
+              "Custom designs as per client requirements",
+              "Clean finishing & smooth edges",
+              "Durable materials & professional workmanship",
+              "Suitable for homes, offices, shops & temples",
+            ];
+            const CheckIcon = () => (
+              <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+            );
+            return (
+                <section className="py-16 px-4 sm:px-[8%] bg-white">
+                  <div className="max-w-5xl mx-auto">
+                    <h2 className="text-center mb-10 text-3xl font-bold text-gray-800">Why Choose Shiv CNC Creations?</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                      {features.map((feature, index) => (
+                        <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
+                          <CheckIcon />
+                          <span className="text-gray-700">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+            );
+        };
+        
+        // ===== COMPONENT: Services =====
+        const Services = () => {
+            // Main Icons
+            const InteriorIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>);
+            const ExteriorIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m-1 4h1m5-4h1m-1 4h1m-1-8h1m-5 8h5" /></svg>);
+            const DoorIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12h.01" /></svg>);
+            const MarbleIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 7l10 15 10-15-10-5z" /><path strokeLinecap="round" strokeLinejoin="round" d="M2 7l10 15L22 7" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20" /></svg>);
+            const SignageIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" /></svg>);
+            const TempleIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>);
+            
+            // Sub-service Icons
+            const iconStyle = "h-6 w-6 text-amber-700 mr-3 flex-shrink-0";
+            const PartitionIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className={iconStyle} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" /><path strokeLinecap="round" strokeLinejoin="round" d="M4 12h16M12 4v16" /></svg>);
+            const WallArtIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className={iconStyle} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>);
+            const MaterialsIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className={iconStyle} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>);
+            const WoodIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className={iconStyle} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>);
+            const WaterResistantIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className={iconStyle} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>);
+            const BoardIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className={iconStyle} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>);
+            const StoneCarvingIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className={iconStyle} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 7l10 15 10-15-10-5z" /></svg>);
+            const NameplateIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" className={iconStyle} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>);
+
+            const servicesData = [
+                { icon: <InteriorIcon />, title: 'Interior CNC Design Solutions', description: 'Enhance your interior spaces with elegant and modern CNC designs.', items: [
+                    { icon: <PartitionIcon />, name: 'CNC Partition Jali Work', details: ['Customized decorative jali panels for partitions', 'Ideal for living rooms, offices, halls, and showrooms', 'Available in modern and traditional patterns'] },
+                    { icon: <WallArtIcon />, name: 'CNC Wall Art', details: ['3D CNC Carved Sculptures for premium wall décor', '2D CNC Jali Art Panels for stylish interiors'] }
+                ]},
+                { icon: <ExteriorIcon />, title: 'Exterior CNC Cutting Work', description: 'Strong, weather-resistant CNC designs for exterior applications, perfect for building façades, balconies, compound walls, gates, and elevation designs.', items: [
+                    { icon: <MaterialsIcon />, name: 'Materials We Use', details: ['ACP (Aluminium Composite Panel)', 'WPC Sheets', 'PVC Sheets'] }
+                ]},
+                { icon: <DoorIcon />, title: 'CNC Door Design & Carving', description: 'High-quality CNC work for elegant and durable doors.', items: [
+                    { icon: <WoodIcon />, name: 'Sagwan (Teak Wood) Doors', details: ['Premium 3D CNC carving', 'Rich designs with long-lasting finish'] },
+                    { icon: <WaterResistantIcon />, name: 'HDHMR Sheet Doors', details: ['Strong & moisture-resistant', '2D and 3D CNC designs'] },
+                    { icon: <BoardIcon />, name: 'MDF Doors', details: ['Cost-effective and stylish', 'Precision 2D & 3D CNC work'] }
+                ]},
+                { icon: <MarbleIcon />, title: 'Marble & Granite CNC Work', description: 'Artistic CNC carving on natural stone materials.', items: [
+                    { icon: <StoneCarvingIcon />, name: 'Marble 3D CNC Carving', details: ['Ideal for temples, decorative panels, and luxury interiors'] },
+                    { icon: <NameplateIcon />, name: 'Granite CNC Name Plates', details: ['Long-lasting and elegant name plates', 'Suitable for homes, offices, and societies'] }
+                ]},
+                { icon: <SignageIcon />, title: 'CNC Name Boards & Signage', description: 'Custom 3D lettering and name boards ideal for shops, offices, factories, and branding.', items: [] },
+                { icon: <TempleIcon />, title: 'CNC Pooja Mandir Work', description: 'Modern and elegant CNC-designed home temples in Corian Sheet. Smooth finish, durable, and easy to maintain.', items: [] }
+            ];
+
+            return (
+                <section className="py-16 px-4 sm:px-[8%] bg-gray-50">
+                  <h2 className="text-center mb-12 text-3xl font-bold text-gray-800">Our CNC Services</h2>
+                  <div className="space-y-12 max-w-6xl mx-auto">
+                    {servicesData.map((service, index) => (
+                      <div key={index} className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 group">
+                        <div className="flex items-start gap-4 md:gap-6">
+                          <div className="flex-shrink-0 mt-1 transition-transform duration-300 group-hover:scale-110">{service.icon}</div>
+                          <div>
+                            <h3 className="text-2xl font-semibold text-amber-600 mb-2">{service.title}</h3>
+                            <p className="text-gray-600 mb-6">{service.description}</p>
+                          </div>
+                        </div>
+                        {service.items.length > 0 && (
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 border-t mt-4">
+                            {service.items.map((item, itemIndex) => (
+                              <div key={itemIndex} className="bg-amber-100 p-4 rounded-lg">
+                                <div className="flex items-center mb-2">
+                                    {item.icon}
+                                    <h4 className="font-bold text-gray-800">{item.name}</h4>
+                                </div>
+                                <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm pl-9">
+                                  {item.details.map((detail, detailIndex) => (
+                                    <li key={detailIndex}>{detail}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </section>
+            );
+        };
+        
+        // ===== COMPONENT: Applications =====
+        const Applications = () => {
+            const applications = [ "Homes & Apartments", "Offices & Commercial Spaces", "Shops & Showrooms", "Temples & Religious Places", "Exterior Elevations & Façades" ];
+            const CheckIcon = () => ( <svg className="w-5 h-5 text-amber-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> );
+            return (
+                <section className="py-16 px-4 sm:px-[8%] bg-white">
+                  <div className="max-w-5xl mx-auto">
+                    <h2 className="text-center mb-10 text-3xl font-bold text-gray-800">Applications We Serve</h2>
+                    <div className="flex flex-wrap justify-center gap-4">
+                      {applications.map((app, index) => (
+                        <div key={index} className="flex items-center py-2 px-4 bg-gray-100 rounded-full shadow-sm">
+                           <CheckIcon />
+                           <span className="text-gray-800 font-medium">{app}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+            );
+        };
+
+        // ===== COMPONENT: ContactUs =====
+        const ContactUs = () => {
+            const PhoneIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-amber-600 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg> );
+            return (
+                <section className="bg-white py-16 px-4 sm:px-[8%]">
+                  <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-12">
+                      <h2 className="text-3xl font-bold text-gray-800">Get In Touch</h2>
+                      <p className="text-gray-600 mt-2">We'd love to hear from you. Call us for quotes, queries, or collaborations.</p>
+                    </div>
+                    <div className="flex justify-center">
+                      <div className="flex">
+                        <PhoneIcon />
+                        <div>
+                          <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
+                          <div className="text-gray-600 flex flex-col space-y-1">
+                            <a href="tel:+917057341391" className="inline-block hover:text-amber-600 transition-all duration-300 hover:translate-x-1">Atul Thakare: +91 70573 41391</a>
+                            <a href="tel:+918554804610" className="inline-block hover:text-amber-600 transition-all duration-300 hover:translate-x-1">Pratik Bokse: +91 85548 04610</a>
+                            <a href="tel:+918390886527" className="inline-block hover:text-amber-600 transition-all duration-300 hover:translate-x-1">Akash Gawande: +91 83908 86527</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            );
+        };
+        
+        // ===== COMPONENT: Footer =====
+        const Footer = () => {
+            return (
+                <footer className="bg-gray-800 text-white text-center p-6">
+                  <div className="max-w-6xl mx-auto">
+                    <p>&copy; {new Date().getFullYear()} Shiv CNC Creations. All Rights Reserved.</p>
+                    <p className="text-sm text-gray-400 mt-2">
+                      Designed and Developed by <a href="https://codenbuild.netlify.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors duration-300">Codenbuild</a>
+                    </p>
+                  </div>
+                </footer>
+            );
+        };
+
+        // ===== COMPONENT: AnimatedSection =====
+        const AnimatedSection = ({ children }) => {
+            const [isVisible, setIsVisible] = useState(false);
+            const sectionRef = useRef(null);
+            useEffect(() => {
+                const observer = new IntersectionObserver(
+                    ([entry]) => {
+                        if (entry.isIntersecting) {
+                            setIsVisible(true);
+                            observer.unobserve(entry.target);
+                        }
+                    }, { root: null, rootMargin: '0px', threshold: 0.1 }
+                );
+                const currentRef = sectionRef.current;
+                if (currentRef) observer.observe(currentRef);
+                return () => { if (currentRef) observer.unobserve(currentRef); };
+            }, []);
+            return ( <div ref={sectionRef} className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}>{children}</div> );
+        };
+
+        // ===== COMPONENT: ScrollToTop =====
+        const ScrollToTop = () => {
+            const ArrowUpIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 11l7-7 7 7M5 19l7-7 7 7" /></svg> );
+            const [isVisible, setIsVisible] = useState(false);
+            const toggleVisibility = () => {
+                if (window.pageYOffset > 300) setIsVisible(true);
+                else setIsVisible(false);
+            };
+            useEffect(() => {
+                window.addEventListener('scroll', toggleVisibility, { passive: true });
+                return () => window.removeEventListener('scroll', toggleVisibility);
+            }, []);
+            const scrollToTop = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+            return (
+                <button
+                  type="button"
+                  onClick={scrollToTop}
+                  className={`fixed bottom-5 right-5 bg-amber-600 text-white rounded-full p-3 shadow-lg hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-opacity-50 transition-all duration-300 ease-in-out hover:rotate-12 ${ isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none' }`}
+                  aria-label="Scroll to top"
+                >
+                  <ArrowUpIcon />
+                </button>
+            );
+        };
+
+        // ===== MAIN APP COMPONENT =====
+        const App = () => {
+            const projectsData = [
+              { imgSrc: "https://raw.githubusercontent.com/codenbuild01-droid/shiv/refs/heads/main/project1.jpg.jpg", title: "Interior CNC Jali Partition" },
+              { imgSrc: "https://raw.githubusercontent.com/codenbuild01-droid/shiv/refs/heads/main/project2.jpg.jpg", title: "CNC Pooja Mandir Work" },
+              { imgSrc: "https://raw.githubusercontent.com/codenbuild01-droid/shiv/refs/heads/main/project3.jpg.jpg", title: "Designer CNC Door Work" },
+              { imgSrc: "https://raw.githubusercontent.com/codenbuild01-droid/shiv/refs/heads/main/project4.jpg.jpg", title: "Stone & Marble CNC Work" },
+              { imgSrc: "https://raw.githubusercontent.com/codenbuild01-droid/shiv/refs/heads/main/project5.jpg.jpg", title: "Exterior CNC Façade Panels" },
+            ];
+            
+            const [selectedImage, setSelectedImage] = useState(null);
+            const handleOpenLightbox = (imgSrc) => setSelectedImage(imgSrc);
+            const handleCloseLightbox = () => setSelectedImage(null);
+
+            return (
+                <div className="bg-gray-100 text-gray-800">
+                  <Header />
+                  <main>
+                    <Hero />
+                    <div id="why-us"><AnimatedSection><WhyChooseUs /></AnimatedSection></div>
+                    <div id="services"><AnimatedSection><Services /></AnimatedSection></div>
+                    <div id="projects"><AnimatedSection><ProjectGallery projects={projectsData} onImageClick={handleOpenLightbox} /></AnimatedSection></div>
+                    <AnimatedSection><Applications /></AnimatedSection>
+                  </main>
+                  <div id="contact"><AnimatedSection><ContactUs /></AnimatedSection></div>
+                  <Footer />
+                  {selectedImage && <Lightbox imgSrc={selectedImage} onClose={handleCloseLightbox} />}
+                  <ScrollToTop />
+                </div>
+            );
+        };
+        
+        // ===== RENDER THE APP =====
+        const rootElement = document.getElementById('root');
+        const root = ReactDOM.createRoot(rootElement);
+        root.render(<App />);
+
+    </script>
 </body>
 </html>
